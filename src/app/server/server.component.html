@@ -1,16 +1,28 @@
-
 <div class="row">
   <div class="col-xs-6">
-      <p>
-          سرور {{ id}} در وضعیت {{status}} قرار دارد
-        </p>
+    
   
-    <input type="text" [(ngModel)]="serverName" class="form-control">
-    <p>سرور {{serverName}} اضافه شد</p>
-    <button class="btn btn-success" (click)="onNewServer()" [disabled]="!btnActive"> سرور جدید</button>
-    <p [innerText]='newServer'></p>
-  </div>
+    <input type="text" 
+          [(ngModel)]="serverName" 
+          class="form-control" >
 
+     
+    <button 
+      class="btn btn-success" 
+      (click)="onNewServer()" 
+      [disabled]="!btnActive"> سرور جدید</button>
+    
+    <p *ngIf="serverCreated; else noServer" [innerText]='newServer'></p>
+   <!--  <p *ngIf="!serverCreated" > هنوز سروری ایجاد نشده است</p> -->
+
+   <ng-template #noServer>
+      <p>  هنوز سروری ایجاد نشده است</p>
+   </ng-template>
+  
+  </div>
+  <div class="col-xs-6">
+    <app-servers *ngFor ="let server of serversList"></app-servers>
+  </div>
 </div>
 
 

@@ -7,11 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServerComponent implements OnInit {
 
-  id: number = 10;
-  status: string = 'فعال'; 
+
   btnActive:boolean = false;
-  newServer= 'هنوز سروری ایجاد نشده است ';
+  newServer= 'هنوز سروری ایجاد نشده است';
   serverName="";
+  serverCreated = false;
+  serversList = [];
 
   constructor() { 
     setTimeout(()=>{
@@ -23,6 +24,8 @@ export class ServerComponent implements OnInit {
   }
 
   onNewServer(){
+    this.serversList.push(this.serverName);
+    this.serverCreated = true;
     this.newServer =' سرور '+ this.serverName +' با موفقیت اضافه شد ' ;
   }
   onUpdateServerName(event:any){
