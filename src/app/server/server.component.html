@@ -21,7 +21,7 @@
   
   </div>
   <div class="col-xs-6">
-    <app-servers *ngFor ="let server of serversList"></app-servers>
+    <p *ngFor ="let server of serversList; let i='index' ">   سرور شماره {{i}}  ایجاد شد</p>
   </div>
 </div>
 
