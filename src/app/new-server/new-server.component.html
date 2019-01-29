@@ -1,0 +1,37 @@
+<div class="container">
+ 
+    <!--header-->
+      <div class="row">
+          <h3 class="text-center mt-10">سامانه مدیریت سرور آکادمی روکسو</h3>
+          <hr>
+      </div>  
+     
+     
+      <!--body-->
+    
+    
+      <div class="row">
+         
+          <div class="col-xs-12 mt-10">
+    
+              <p>یک سرور داخل ایران یا فرانسه انتخاب کنید</p>
+    
+            <label> نام سرور </label>
+            <input type="text" id="name" class="form-control" [(ngModel)]= "newServerName" >
+    
+    
+            <label> محتوی سرور </label>
+            <input type="text" id="content" class="form-control" [(ngModel)]= "newServerContent" >
+    
+            <br/>
+    
+            <button class="btn btn-warning" (click)="onAddPersianServer()">
+              افزودن سرور ایران
+            </button>  
+    
+             <button class="btn btn-primary" (click)="onAddFrenchServer()">
+              افزودن سرور فرانسه
+            </button>  
+          </div>
+      </div>
+</div>

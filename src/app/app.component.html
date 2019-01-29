@@ -1,39 +1,15 @@
+
 <div class="container">
- 
-<!--header-->
-  <div class="row">
-      <h3 class="text-center mt-10">سامانه مدیریت سرور آکادمی روکسو</h3>
-      <hr>
-  </div>  
- <!--body-->
-  <app-server></app-server>
-
-
-  <div>
-      <hr>
-      <div class="col-xs-12 mt-10">
-
-          <p>یک سرور داخل ایران یا فرانسه انتخاب کنید</p>
-
-        <label> نام سرور </label>
-        <input type="text" id="name" class="form-control" >
-
-
-        <label> محتوی سرور </label>
-        <input type="text" id="content" class="form-control" >
-
-        <br/>
-
-        <button class="btn btn-warning" (click)="onAddPersianServer">
-          افزودن سرور ایران
-        </button>  
-
-         <button class="btn btn-primary" (click)="onAddFrenchServer">
-          افزودن سرور فرانسه
-        </button>  
-      </div>
-  </div>
-
-</div>
+<app-new-server 
+        (iranianServer)="onLocalServer($event)" 
+        (frenchServer)="onExternalServer($event)">
+</app-new-server>
 
 <hr>
+
+<app-server-elements 
+        *ngFor = "let serverElement of serverElements" 
+        [alias]="serverElement">
+</app-server-elements>
+
+</div> 
