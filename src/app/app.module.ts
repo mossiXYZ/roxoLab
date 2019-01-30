@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { NewServerComponent } from './new-server/new-server.component';
 import { ServerElementsComponent } from './server-elements/server-elements.component';
+import { DemoDirectiveComponent } from './demo-directive/demo-directive.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NewServerComponent,
-    ServerElementsComponent
+    ServerElementsComponent,
+    DemoDirectiveComponent
   ],
   imports: [
     BrowserModule,
