@@ -8,13 +8,15 @@ import { FormsModule } from '@angular/forms';
 import { NewServerComponent } from './new-server/new-server.component';
 import { ServerElementsComponent } from './server-elements/server-elements.component';
 import { DemoDirectiveComponent } from './demo-directive/demo-directive.component';
+import {  HighlightDirective } from './shared/highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     NewServerComponent,
     ServerElementsComponent,
-    DemoDirectiveComponent
+    DemoDirectiveComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
