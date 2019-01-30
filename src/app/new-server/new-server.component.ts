@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-new-server',
@@ -15,8 +15,11 @@ export class NewServerComponent implements OnInit {
   newServerName ='';
   newServerContent ='';
 
+  @ViewChild('serverContent') serverContent: ElementRef; 
+
   onAddPersianServer(){
-    this.iranianServer.emit({nameServer: this.newServerName, contentServer: this.newServerContent});
+    this.iranianServer.emit({nameServer: this.newServerName, contentServer: this.serverContent.nativeElement.value});
+    // console.log(this.serverContent);
   }
   
   onAddFrenchServer(){
