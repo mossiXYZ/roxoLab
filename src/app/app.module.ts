@@ -9,6 +9,7 @@ import { NewServerComponent } from './new-server/new-server.component';
 import { ServerElementsComponent } from './server-elements/server-elements.component';
 import { DemoDirectiveComponent } from './demo-directive/demo-directive.component';
 import {  HighlightDirective } from './shared/highlight.directive';
+import { BetterhighlightDirective } from './shared/betterhighlight.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {  HighlightDirective } from './shared/highlight.directive';
     NewServerComponent,
     ServerElementsComponent,
     DemoDirectiveComponent,
-    HighlightDirective
+    HighlightDirective,
+    BetterhighlightDirective
   ],
   imports: [
     BrowserModule,
